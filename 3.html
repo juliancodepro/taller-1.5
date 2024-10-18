@@ -1,59 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ricardo's Page</title>
+    <title>Diseño con Flexbox Reducido y Gaps</title>
     <style>
-        body{
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px; 
+            width: 100%;
+        }
+
+        .header, .footer {
+            background-color: #3498db;
+            height: 40px; 
+            text-align: center;
             display: flex;
             align-items: center;
             justify-content: center;
-            height: 100vh;
-
+            color: white;
+            font-size: 0.9em;
+            margin-bottom: 10px; 
         }
-        main {
-            font-family: Arial, sans-serif;
-            background-color: #FFCC66;
-            margin:  0 auto;
+
+        .footer {
+            margin-top: 10px; 
+        }
+
+        .main-container {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .main {
+            background-color: #2ecc71;
+            flex-grow: 2;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px; 
+            padding: 20px;
+            margin-right: 10px; 
+        }
+
+        .item {
+            background-color: #27ae60;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            height: 100px; 
+            border-radius: 10px;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2), 
+                        0 6px 20px rgba(0, 0, 0, 0.15);
+            font-size: 0.8em;
+        }
+
+        .sidebar {
+            background-color: #e74c3c;
+            width: 100px; 
             padding: 10px;
-            color: #333333;
-            max-width: 600px;
-            color: #007300;
-            border: 1px solid gray;
-
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
         }
-       
+
     </style>
 </head>
 <body>
 
-        
-        
-    <main style="background-color: #ffc690;">
-        <h1>Ricardo's Page</h1>
-        <h2>My Dog</h2>
-    
-        <div class="content" style="display: flex; gap: 10px; margin: 0 10px;">
-            <img src="https://estaticos-cdn.prensaiberica.es/clip/48978c2d-5ebf-4467-85e0-d88ecc829ec7_16-9-discover-aspect-ratio_default_0.webp" alt="My dog" style="object-fit: cover; aspect-ratio: auto; max-width: 200px;">
-            <div>
-                <p>My dog Sasha is my best friend. She likes to chase the soccer ball when I practice. It is so funny to see her running down the field trying to catch the ball with her mouth. It just won't fit!</p>
-    
+    <div class="container">
+        <div class="header">
+            header
+        </div>
+
+        <div class="main-container">
+            <div class="main">
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
+                <div class="item">item</div>
             </div>
-    
+            <div class="sidebar">
+                sidebar
+            </div>
         </div>
-        <div>
-            <p>Once Sasha saved my life. When I was only 4 years old, I started to go into the street to get a ball that had rolled across the street. Of course, I did not think to look for cars! Sasha got in front of me and knocked me backwards onto the sidewalk. I was mad until I saw the car go by where I would have been. Then I was so happy that Sasha was smarter than I was!</p>
-        </div>
-        <hr>
-    
+
         <div class="footer">
-            <img src="c:\Users\jcmf1\Downloads\pngwing.com.png" alt="Los Lobos - my team" width="50">
-            <a href="https://example.com/teacher_page">Back to Teacher's page</a>
-            <p>01/05/02</p>
+            footer
         </div>
-    </main>
-    
+    </div>
 
 </body>
 </html>

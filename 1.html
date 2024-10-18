@@ -1,39 +1,75 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset=utf-8>
-<title>HTML CSS Form exercise</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Flexbox Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .header {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px; /* Espacio entre artículos */
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .article {
+            background-color: #00FFFF;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .article h2 {
+            margin-top: 0;
+        }
+    </style>
 </head>
 <body>
-<div class="container">
-<h1>Travel reservation form</h1>
-<h3>* denotes mandotory</h3>
-<form id="registration_form" method="POST">
-<label>Full name*:</label><br>
-<input type="text" name="full_name" placeholder="FirstName LastName" autofocus="autofocus" value=""><br>
-<label>Email address*:</label><br>
-<input type="text" name="email_addr" value=""><br>
-<label>Select Tour Package* :</label><br>
-<select name="package">
-<option value="Elite" >Elite</option>
-<option value="Premium" >Premium</option>
-<option value="VIP" >VIP</option>
-</select><br>
-<label>Arrival date*:</label><br>
-<input type="text" name="arv_dt" placeholder="m/d/y" value=""><br>
-<label>Number of persons*:</label><br>
-<input type="text" name="persons" value=""><br>
-<label>What would you want to avail?*</label><br>
-  Boarding<input type="checkbox" name="facilities[]" value="boarding"  ><br>
-  Fooding<input type="checkbox" name="facilities[]" value="fooding"  ><br>
-  Sight seeing<input type="checkbox" name="facilities[]" value="sightseeing"  ><br>
-<label>Discount Coupon code:</label><br>
-<input type="text" name="dis_code" value=""><br>
-<label>Terms and conditions*</label><br>
-<input type="radio" name="tnc" value="agree" checked>I agree 
-<input type="radio" name="tnc" value="disagree" >I disagree<br>
-<button type="submit" class="btn btn-large btn-primary" name="submit">Complete reservation</button>
-</form>
-</div>
+
+    <div class="header">
+        Sample flexbox example
+    </div>
+
+    <div class="container">
+        <div class="article">
+            <h2>First article</h2>
+            <p>
+                Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.
+            </p>
+        </div>
+
+        <div class="article">
+            <h2>Second article</h2>
+            <p>
+                Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.
+            </p>
+        </div>
+
+        <div class="article">
+            <h2>Third article</h2>
+            <p>
+                Tacos actually microdosing, pour-over semiotics banjo chicharrones retro fanny pack portland everyday carry vinyl typewriter. Tacos PBR&B pork belly, everyday carry ennui pickled sriracha normcore hashtag polaroid single-origin coffee cold-pressed. PBR&B tattooed trust fund twee, leggings salvia iPhone photo booth health goth gastropub hammock.
+                <br><br>
+                Cray food truck brunch, XOXO +1 keffiyeh pickled chambray waistcoat ennui. Organic small batch paleo 8-bit. Intelligentsia umami wayfarers pickled, asymmetrical kombucha letterpress kitsch leggings cold-pressed squid chartreuse put a bird on it. Listicle pickled man bun cornhole heirloom art party.
+            </p>
+        </div>
+    </div>
+
 </body>
 </html>

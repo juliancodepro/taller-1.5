@@ -1,39 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Basic Form Design</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "hero main-content main-content"
+                "sidebar main-content main-content"
+                "sidebar extra-content extra-content"
+                "related-images related-images related-posts"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;  
+            grid-template-rows: auto 2fr 2fr auto auto; /* Filas más altas para hacer el diseño más vertical */
+            gap: 5px;  
+            padding: 5px;
+            max-width: 400px;   /* Hacemos el diseño más estrecho */
+            width: 100%;        
+            background-color: white;
+        }
+
+        .grid-item {
+            padding: 5px;
+            font-size: 12px;
+            text-align: center;
+            color: white;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: #00cccc;
+        }
+
+        .hero {
+            grid-area: hero;
+            background-color: #dab3ff;
+            height: 100px;
+        }
+
+        .main-content {
+            grid-area: main-content;
+            background-color: #ffcc66;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #99cc66;
+        }
+
+        .extra-content {
+            grid-area: extra-content;
+            background-color: #b3b3b3;
+        }
+
+        .related-images {
+            grid-area: related-images;
+            background-color: #66cc66;
+            height: 120px; /* Ajustamos un poco la altura */
+        }
+
+        .related-posts {
+            grid-area: related-posts;
+            background-color: #ffccff;
+            height: 120px; /* Ajustamos un poco la altura */
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: #ff9933;
+            height: 80px;
+        }
+    </style>
 </head>
 <body>
-    <h1>GeeksforGeeks</h1>
-    <h3>Basic form design using HTML</h3>
-    
-    <form>
-        <fieldset>
-            <legend>Personal Details</legend>
-            
-            <label for="fname">First name :</label>
-            <input type="text" id="fname" name="fname"><br><br>
-            
-            <label for="lname">Last name :</label>
-            <input type="text" id="lname" name="lname"><br><br>
-            
-            <label>Gender :</label>
-            <input type="radio" id="male" name="gender" value="Male">
-            <label for="male">Male</label>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label><br><br>
-            
-            <label for="email">Email :</label>
-            <input type="email" id="email" name="email"><br><br>
-            
-            <label for="dob">Date of Birth :</label>
-            <input type="date" id="dob" name="dob"><br><br>
-            
-            <label for="address">Address :</label><br>
-            <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
-            
-            <input type="submit" value="Submit">
-        </fieldset>
-    </form>
+
+    <div class="grid-container">
+        <div class="grid-item header">Header</div>
+        <div class="grid-item hero">Hero</div>
+        <div class="grid-item main-content">Main Content</div>
+        <div class="grid-item sidebar">Sidebar</div>
+        <div class="grid-item extra-content">Extra Content</div>
+        <div class="grid-item related-images">Related Images</div>
+        <div class="grid-item related-posts">Related Posts</div>
+        <div class="grid-item footer">Footer</div>
+    </div>
+
 </body>
 </html>
